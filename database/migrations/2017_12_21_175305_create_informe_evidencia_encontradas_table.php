@@ -13,8 +13,19 @@ class CreateInformeEvidenciaEncontradasTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_evidencia_encontradas', function (Blueprint $table) {
+        Schema::create('informe_evidencias_encontradas', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('numero_expediente');
+            $table->string('fiscal');
+            $table->string('evidencia');
+            $table->string('tipo_evidencia');
+            $table->string('descripcion');
+            $table->string('lugar_encuentro');
+            $table->string('oficial');
+            $table->integer('placa');
+            $table->DateTime('fecha_encuentro');
+            $table->DateTime('fecha_envio');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

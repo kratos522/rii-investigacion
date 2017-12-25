@@ -15,6 +15,7 @@ class CreateInformeDiligenciasTable extends Migration
     {
         Schema::create('informe_diligencias', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

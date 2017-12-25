@@ -13,8 +13,10 @@ class CreateInformePericialsTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_pericials', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('informes_periciales', function (Blueprint $table) {
+            $table->increments('id')
+            $table->DateTime('fecha_solicitud');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

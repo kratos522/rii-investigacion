@@ -15,6 +15,8 @@ class CreateInformeEjecutivosTable extends Migration
     {
         Schema::create('informe_ejecutivos', function (Blueprint $table) {
             $table->increments('id');
+            $table->DateTime('fecha_solicitud');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

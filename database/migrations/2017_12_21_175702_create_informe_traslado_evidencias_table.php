@@ -15,6 +15,15 @@ class CreateInformeTrasladoEvidenciasTable extends Migration
     {
         Schema::create('informe_traslado_evidencias', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('numero_expediente');
+            $table->string('fiscal');
+            $table->string('evidencia');
+            $table->string('descripcion')->nullable();
+            $table->DateTime('fecha_encuentro_evidencia');
+            $table->string('lugar_encuentro_evidencia');
+            $table->DateTime('fecha_traslado');
+            $table->string('lugar_traslado');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

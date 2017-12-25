@@ -15,6 +15,9 @@ class CreateIndiciosTable extends Migration
     {
         Schema::create('indicios', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre');
+            $table->string('descripcion');
+            $table->string('observacion')->nullable();
             $table->timestamps();
         });
     }

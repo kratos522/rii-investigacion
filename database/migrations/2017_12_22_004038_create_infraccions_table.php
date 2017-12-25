@@ -13,8 +13,11 @@ class CreateInfraccionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('infraccions', function (Blueprint $table) {
+        Schema::create('infracciones', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre');
+            $table->string('descripcion');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

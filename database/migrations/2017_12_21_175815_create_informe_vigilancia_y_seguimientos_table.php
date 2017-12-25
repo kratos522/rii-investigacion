@@ -13,8 +13,17 @@ class CreateInformeVigilanciaYSeguimientosTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_vigilancia_y_seguimientos', function (Blueprint $table) {
+        Schema::create('informe_vigilancias_y_seguimientos', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('numero_expediente');
+            $table->string('fiscal');
+            $table->integer('id_orden');
+            $table->string('oficial_asignado')->nullable();
+            $table->integer('nombre_sospechoso')->nullable();
+            $table->string('lugar_seguimiento')->nullable();
+            $table->DateTime('fecha_comienzo_seguimiento')->nullable();
+            $table->string('observaciones')->nullable();
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

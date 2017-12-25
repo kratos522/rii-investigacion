@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 // el fiscal tambien podria ser una relacion, si el es el que pide este informe
 class InformeAntecedentePolicial extends Model
 {
+
+protected $table = "informe_antecedentes_policiales";
+
   public function informe(){
        return $this->morphOne(Informe::class, 'informable');
    }

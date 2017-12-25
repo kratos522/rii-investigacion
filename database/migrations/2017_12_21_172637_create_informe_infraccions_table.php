@@ -13,8 +13,20 @@ class CreateInformeInfraccionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_infraccions', function (Blueprint $table) {
+        Schema::create('informe_infracciones', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('licencia');
+            $table->integer('identidad');
+            $table->string('nombre_infractor');
+            $table->sring('placa');
+            $table->string('marca_vehiculo');
+            $table->string('tipo_vehiculo');
+            $table->string('modelo_vehiculo');
+            $table->string('infraccion');
+            $table->string('lugar_infraccion');
+            $table->DateTime('fecha_infraccion');
+            $table->string('observacion');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

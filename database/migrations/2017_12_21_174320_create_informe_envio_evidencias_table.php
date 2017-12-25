@@ -15,6 +15,15 @@ class CreateInformeEnvioEvidenciasTable extends Migration
     {
         Schema::create('informe_envio_evidencias', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('numero_expediente');
+            $table->string('evidencia');
+            $table->string('descripcion');
+            $table->string('lugar_almacenamiento');
+            $table->string('lugar_envio');
+            $table->string('fiscal');
+            $table->DateTime('fecha_almacenamiento');
+            $table->DateTime('fecha_envio');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

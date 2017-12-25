@@ -13,8 +13,13 @@ class CreateInformeAntecedentePolicialsTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_antecedente_policials', function (Blueprint $table) {
+        Schema::create('informe_antecedentes_policiales', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre');
+            $table->string('delito');
+            $table->DateTime('fecha_solicitud');
+            $table->string('nombre_solicitante');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

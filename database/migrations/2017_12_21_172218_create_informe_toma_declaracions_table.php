@@ -13,8 +13,18 @@ class CreateInformeTomaDeclaracionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_toma_declaracions', function (Blueprint $table) {
+        Schema::create('informe_toma_declaraciones', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('numero_expediente');
+            $table->string('fiscal')->nullable();
+            $table->string('id_testigo')->nullable();
+            $table->string('nombre_testigo')->nullable();
+            $table->string('sexo_testigo');
+            $table->integer('edad_testigo');
+            $table->DateTime('fecha_toma_declaracion');
+            $table->string('nombre_tomador_declaracion');
+            $table->string('placa');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

@@ -6,11 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class InformeCriminal extends Model
 {
+protected $table = "informes_criminales";
 
   public function informe(){
        return $this->morphOne(Informe::class, 'informable');
    }
-  
+
   public function fiscales(){
        return $this->hasOne(Fiscal::class);
    }

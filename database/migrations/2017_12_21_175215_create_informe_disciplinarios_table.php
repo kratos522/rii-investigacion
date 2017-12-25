@@ -15,6 +15,10 @@ class CreateInformeDisciplinariosTable extends Migration
     {
         Schema::create('informe_disciplinarios', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nombre_oficial');
+            $table->integer('placa_oficial');
+            $table->string('descripcion');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

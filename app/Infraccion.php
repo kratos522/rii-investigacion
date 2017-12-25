@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Infraccion extends Model
 {
+protected $table = "infracciones";
+
   public function documento(){
        return $this->morphOne(Documento::class, 'documentable');
    }

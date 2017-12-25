@@ -13,8 +13,13 @@ class CreateInformeDelitoContraLaPropiedadsTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_delito_contra_la_propiedads', function (Blueprint $table) {
+        Schema::create('informe_delitos_contra_la_propiedad', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_sospechoso')->nullable();
+            $table->string('nombre_sospechoso')->nullable();
+            $table->string('descripcion_danios');
+            $table->string('observaciones');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

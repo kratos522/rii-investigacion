@@ -13,8 +13,17 @@ class CreateInformePerfilacionCriminalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_perfilacion_criminals', function (Blueprint $table) {
+        Schema::create('informe_perfilaciones_criminales', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('numero_expediente');
+            $table->string('fiscal');
+            $table->DateTime('fecha_solicitud');
+            $table->DateTime('fecha_envio');
+            $table->string('nombre_sospechoso');
+            $table->string('nombre_victima');
+            $table->string('perito');
+            $table->string('descripcion');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

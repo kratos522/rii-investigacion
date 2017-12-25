@@ -15,6 +15,16 @@ class CreateInformeTrasladoCapturadosTable extends Migration
     {
         Schema::create('informe_traslado_capturados', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('numero_expediente');
+            $table->string('fiscal');
+            $table->string('id_imputado');
+            $table->string('nombre_imputado');
+            $table->integer('id_orden_captura')->nullable();
+            $table->DateTime('fecha_captura');
+            $table->string('lugar_captura');
+            $table->DateTime('fecha_traslado');
+            $table->string('lugar_traslado');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

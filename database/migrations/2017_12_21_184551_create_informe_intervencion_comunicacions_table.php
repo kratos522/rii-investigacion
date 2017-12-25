@@ -13,8 +13,21 @@ class CreateInformeIntervencionComunicacionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_intervencion_comunicacions', function (Blueprint $table) {
+        Schema::create('informe_intervencion_comunicaciones', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_solicitud');
+            $table->integer('id_aprobacion');
+            $table->DateTime('fecha_solicitud');
+            $table->DateTime('fecha_aprovacion');
+            $table->integer('numero_juez');
+            $table->integer('numero_expediente');
+            $table->string('fiscal');
+            $table->string('descripcion_intervencion');
+            $table->integer('tiempo_intervencion')->nullable();
+            $table->DateTime('fecha_comienzo_intervencion');
+            $table->DateTime('fecha_fin_intervension')->nullable();
+            $table->string('observaciones');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

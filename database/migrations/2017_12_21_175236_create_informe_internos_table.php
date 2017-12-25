@@ -13,8 +13,10 @@ class CreateInformeInternosTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_internos', function (Blueprint $table) {
+        Schema::create('informes_internos', function (Blueprint $table) {
             $table->increments('id');
+            $table->DateTime('fecha_solicitud');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

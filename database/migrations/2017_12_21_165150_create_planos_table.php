@@ -15,6 +15,10 @@ class CreatePlanosTable extends Migration
     {
         Schema::create('planos', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('autor');
+            $table->DateTime('fecha_creacion');
+            $table->string('lugar_representado');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

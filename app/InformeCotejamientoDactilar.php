@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class InformeCotejamientoDactilar extends Model
 {
+  protected $table = "informe_cotejamientos_dactilares";
+
   public function informe(){
        return $this->morphOne(Informe::class, 'informable');
    }

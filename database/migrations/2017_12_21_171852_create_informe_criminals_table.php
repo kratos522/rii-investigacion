@@ -13,8 +13,14 @@ class CreateInformeCriminalsTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_criminals', function (Blueprint $table) {
+        Schema::create('informes_criminales', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('numero_expediente');
+            $table->string('fiscal');
+            $table->integer('id_sospechoso')->nullable();
+            $table->string('nombre_sospechoso');
+            $table->DateTime('fecha_solicitud');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

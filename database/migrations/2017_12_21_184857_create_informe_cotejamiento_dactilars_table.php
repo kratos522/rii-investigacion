@@ -13,8 +13,16 @@ class CreateInformeCotejamientoDactilarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('informe_cotejamiento_dactilars', function (Blueprint $table) {
+        Schema::create('informe_cotejamientos_dactilares', function (Blueprint $table) {
+         //faltaria ver como se va a manejar la huella
             $table->increments('id');
+            $table->string('perito');
+            $table->string('placa_perito');
+            $table->string('nombre_detenido');
+            $table->string('nombre_sospechoso')->nullable();
+            $table->string('delito')->nullable();
+            $table->DateTime('fecha_cotejamiento');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

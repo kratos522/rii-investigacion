@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class InformeExtradicion extends Model
 {
+protected $table = "informe_extradiciones";
+
   public function informe(){
        return $this->morphOne(Informe::class, 'informable');
    }

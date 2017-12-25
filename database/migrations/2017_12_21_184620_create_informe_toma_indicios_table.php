@@ -15,6 +15,11 @@ class CreateInformeTomaIndiciosTable extends Migration
     {
         Schema::create('informe_toma_indicios', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('indicio');
+            $table->string('descripcion');
+            $table->string('lugar_toma_indicio');
+            $table->DateTime('fecha_toma_indicio');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

@@ -15,6 +15,15 @@ class CreateInformePerfilSospechososTable extends Migration
     {
         Schema::create('informe_perfil_sospechosos', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('numero_expediente');
+            $table->string('fiscal');
+            $table->DateTime('fecha_solicitud');
+            $table->DateTime('fecha_envio');
+            $table->integer('id_sospechoso')->nullable();
+            $table->string('nombre_sospechoso');
+            $table->string('perito');
+            $table->string('resultados');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+protected $table = "informes_avances";
 //este informe puede estar relacionado con la denuncia o con un expediente?
 class InformeAvance extends Model
 {

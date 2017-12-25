@@ -15,6 +15,15 @@ class CreateInformeInfiltracionAgentesTable extends Migration
     {
         Schema::create('informe_infiltracion_agentes', function (Blueprint $table) {
             $table->increments('id');
+            $table->DateTime('fecha_infiltracion');
+            $table->string('organizacion_infiltrada')->nullable();
+            $table->string('nombre_agente')->nullable();
+            $table->string('fiscal');
+            $table->string('descripcion_infiltracion');
+            $table->string('observaciones');
+            $table->string('lugar_captura');
+            $table->DateTime('fecha_captura');
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }

@@ -6,6 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class InformeInfraccion extends Model
 {
+protected $table = "informe_infracciones";
+
   public function informe(){
        return $this->morphOne(Informe::class, 'informable');
    }
@@ -17,5 +19,5 @@ class InformeInfraccion extends Model
    public function sospechosos(){
         return $this->hasMany(Sospechoso::class);
     }
-    
+
 }
