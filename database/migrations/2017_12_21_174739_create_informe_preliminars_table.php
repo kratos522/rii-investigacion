@@ -19,7 +19,6 @@ class CreateInformePreliminarsTable extends Migration
             $table->string('nombre_fiscal');
             $table->string('investigador');
             $table->string('placa_investigador');
-            $table->string('nombre_fiscal');
             $table->string('delito');
             $table->DateTime('fecha_solicitud');
             $table->string('nombre_sospechoso')->nullable();
@@ -38,6 +37,6 @@ class CreateInformePreliminarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_preliminars');
+        Schema::dropIfExists('informes_preliminares');
     }
 }

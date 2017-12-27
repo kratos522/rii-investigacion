@@ -36,6 +36,6 @@ class CreateInformeRemisionPersonaMedicinaForensesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_remision_persona_medicina_forenses');
+        Schema::dropIfExists('informe_remision_personas_medicina_forense');
     }
 }

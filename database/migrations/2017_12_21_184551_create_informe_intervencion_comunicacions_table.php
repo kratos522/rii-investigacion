@@ -39,6 +39,6 @@ class CreateInformeIntervencionComunicacionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_intervencion_comunicacions');
+        Schema::dropIfExists('informe_intervencion_comunicaciones');
     }
 }

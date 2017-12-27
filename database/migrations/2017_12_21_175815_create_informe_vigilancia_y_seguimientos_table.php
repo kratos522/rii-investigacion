@@ -35,6 +35,6 @@ class CreateInformeVigilanciaYSeguimientosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_vigilancia_y_seguimientos');
+        Schema::dropIfExists('informe_vigilancias_y_seguimientos');
     }
 }

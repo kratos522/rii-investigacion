@@ -34,6 +34,6 @@ class CreateInformeCotejamientoDactilarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_cotejamiento_dactilars');
+        Schema::dropIfExists('informe_cotejamientos_dactilares');
     }
 }

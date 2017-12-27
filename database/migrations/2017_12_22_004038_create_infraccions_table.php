@@ -29,6 +29,6 @@ class CreateInfraccionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('infraccions');
+        Schema::dropIfExists('infracciones');
     }
 }

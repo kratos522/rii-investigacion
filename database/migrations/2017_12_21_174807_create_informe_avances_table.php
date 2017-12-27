@@ -18,8 +18,7 @@ class CreateInformeAvancesTable extends Migration
             $table->integer('numero_expediente');
             $table->string('nombre_fiscal');
             $table->string('investigador');
-            $table->string('placa_investigador');
-            $table->string('nombre_fiscal');
+            $table->string('placa_investigador');            
             $table->string('delito');
             $table->DateTime('fecha_solicitud');
             $table->string('nombre_sospechoso')->nullable();
@@ -38,6 +37,6 @@ class CreateInformeAvancesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_avances');
+        Schema::dropIfExists('informes_avances');
     }
 }

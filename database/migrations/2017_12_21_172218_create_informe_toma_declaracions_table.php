@@ -36,6 +36,6 @@ class CreateInformeTomaDeclaracionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_toma_declaracions');
+        Schema::dropIfExists('informe_toma_declaraciones');
     }
 }

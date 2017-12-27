@@ -32,6 +32,6 @@ class CreateInformeCriminalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_criminals');
+        Schema::dropIfExists('informes_criminales');
     }
 }

@@ -31,6 +31,6 @@ class CreateInformeAntecedentePolicialsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_antecedente_policials');
+        Schema::dropIfExists('informe_antecedentes_policiales');
     }
 }

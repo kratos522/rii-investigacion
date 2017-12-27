@@ -18,7 +18,7 @@ class CreateInformeInfraccionsTable extends Migration
             $table->integer('licencia');
             $table->integer('identidad');
             $table->string('nombre_infractor');
-            $table->sring('placa');
+            $table->string('placa');
             $table->string('marca_vehiculo');
             $table->string('tipo_vehiculo');
             $table->string('modelo_vehiculo');
@@ -38,6 +38,6 @@ class CreateInformeInfraccionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_infraccions');
+        Schema::dropIfExists('informe_infracciones');
     }
 }

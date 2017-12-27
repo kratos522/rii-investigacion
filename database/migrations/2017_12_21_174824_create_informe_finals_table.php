@@ -15,8 +15,7 @@ class CreateInformeFinalsTable extends Migration
     {
         Schema::create('informes_finales', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('numero_expediente');
-            $table->string('nombre_fiscal');
+            $table->integer('numero_expediente');            
             $table->string('investigador');
             $table->string('placa_investigador');
             $table->string('nombre_fiscal');
@@ -38,6 +37,6 @@ class CreateInformeFinalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_finals');
+        Schema::dropIfExists('informes_finales');
     }
 }

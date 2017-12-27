@@ -37,6 +37,6 @@ class CreateInformeTrasladoMenorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_traslado_menors');
+        Schema::dropIfExists('informe_traslado_menores');
     }
 }

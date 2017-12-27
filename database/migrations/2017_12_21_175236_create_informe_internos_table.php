@@ -28,6 +28,6 @@ class CreateInformeInternosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_internos');
+        Schema::dropIfExists('informes_internos');
     }
 }

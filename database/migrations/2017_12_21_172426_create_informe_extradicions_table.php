@@ -36,6 +36,6 @@ class CreateInformeExtradicionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_extradicions');
+        Schema::dropIfExists('informe_extradiciones');
     }
 }

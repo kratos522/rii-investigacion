@@ -37,6 +37,6 @@ class CreateInformeEvidenciaEncontradasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_evidencia_encontradas');
+        Schema::dropIfExists('informe_evidencias_encontradas');
     }
 }

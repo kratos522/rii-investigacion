@@ -33,8 +33,7 @@ class CreateActaDeclaracionTestigosTable extends Migration
           $table->string('funcionario');
           $table->string('placa');
           $table->DateTime('fecha_declaracion');
-          $table->boolean('deleted')->default(false);
-          $table->integer('numero_expediente');
+          $table->boolean('deleted')->default(false);          
           $table->timestamps();
         });
     }

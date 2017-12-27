@@ -35,6 +35,6 @@ class CreateInformeRetratoHabladosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_retrato_hablados');
+        Schema::dropIfExists('informe_retratos_hablados');
     }
 }

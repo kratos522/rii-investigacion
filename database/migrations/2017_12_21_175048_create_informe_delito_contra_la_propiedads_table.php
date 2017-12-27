@@ -31,6 +31,6 @@ class CreateInformeDelitoContraLaPropiedadsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('informe_delito_contra_la_propiedads');
+        Schema::dropIfExists('informe_delitos_contra_la_propiedad');
     }
 }
