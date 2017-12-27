@@ -13,9 +13,28 @@ class CreateActaDeclaracionOfendidosTable extends Migration
      */
     public function up()
     {
-        Schema::create('acta_declaracion_ofendidos', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::create('acta_declaraciones_ofendidos', function (Blueprint $table) {
+          $table->increments('id');
+          $table->integer('numero_expediente');
+          $table->string('fiscal');
+          $table->string('lugar_declaracion');
+          $table->string('id_ofendido');
+          $table->string('nombre_ofendido');
+          $table->integer('edad_ofendido');
+          $table->string('sexo_ofendido');
+          $table->string('lugar_nacimiento');
+          $table->string('estado_civil');
+          $table->string('nivel_educativo');
+          $table->string('direcion_vivienda');
+          $table->string('telefono');
+          $table->string('correo');
+          $table->string('declaracion');
+          $table->string('abogado_defensor')->nullable();
+          $table->string('funcionario');
+          $table->string('placa');
+          $table->DateTime('fecha_declaracion');
+          $table->boolean('deleted')->default(false);
+          $table->timestamps();
         });
     }
 
@@ -26,6 +45,6 @@ class CreateActaDeclaracionOfendidosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acta_declaracion_ofendidos');
+        Schema::dropIfExists('acta_declaraciones_ofendidos');
     }
 }

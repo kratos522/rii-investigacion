@@ -13,9 +13,16 @@ class CreateActaCitacionsTable extends Migration
      */
     public function up()
     {
-        Schema::create('acta_citacions', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::create('acta_citaciones', function (Blueprint $table) {
+          $table->increments('id');
+          $table->integer('numero_expediente');
+          $table->string('fiscal');
+          $table->string('lugar_citacion');
+          $table->string('id_persona');
+          $table->string('nombre_persona');
+          $table->DateTime('fecha_citacion');
+          $table->boolean('deleted')->default(false);
+          $table->timestamps();
         });
     }
 
@@ -26,6 +33,6 @@ class CreateActaCitacionsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acta_citacions');
+        Schema::dropIfExists('acta_citaciones');
     }
 }

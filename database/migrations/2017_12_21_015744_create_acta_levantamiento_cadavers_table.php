@@ -13,7 +13,7 @@ class CreateActaLevantamientoCadaversTable extends Migration
      */
     public function up()
     {
-        Schema::create('acta_levantamiento_de_cadaver', function (Blueprint $table) {
+        Schema::create('acta_levantamiento_de_cadaveres', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('numero_expediente')->nullable();
             $table->integer('id_acta')->nullable();
@@ -38,6 +38,6 @@ class CreateActaLevantamientoCadaversTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acta_levantamiento_cadavers');
+        Schema::dropIfExists('acta_levantamiento_de_cadaveres');
     }
 }

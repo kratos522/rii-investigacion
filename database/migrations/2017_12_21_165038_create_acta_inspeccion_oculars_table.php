@@ -13,9 +13,14 @@ class CreateActaInspeccionOcularsTable extends Migration
      */
     public function up()
     {
-        Schema::create('acta_inspeccion_oculars', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::create('acta_inspecciones_oculares', function (Blueprint $table) {
+          $table->increments('id');
+          $table->integer('numero_expediente');
+          $table->string('fiscal');
+          $table->string('lugar_inspeccion');
+          $table->string('fecha_inspeccion');
+          $table->boolean('deleted')->default(false);
+          $table->timestamps();
         });
     }
 
@@ -26,6 +31,6 @@ class CreateActaInspeccionOcularsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('acta_inspeccion_oculars');
+        Schema::dropIfExists('acta_inspecciones_oculares');
     }
 }
