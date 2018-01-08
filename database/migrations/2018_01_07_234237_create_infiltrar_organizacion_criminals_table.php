@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNotaRojasTable extends Migration
+class CreateInfiltrarOrganizacionCriminalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateNotaRojasTable extends Migration
      */
     public function up()
     {
-        Schema::create('notas_rojas', function (Blueprint $table) {
+        Schema::create('infiltrar_organizaciones_criminales', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('id_orden');
             $table->string('workflow_state')->nullable();
-            $table->integer('identidad_persona');
-            $table->string('nombre_persona');
-            $table->string('nacionalidad');
-            $table->string('descripcion');
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
@@ -32,6 +29,6 @@ class CreateNotaRojasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notas_rojas');
+        Schema::dropIfExists('infiltrar_organizaciones_criminales');
     }
 }

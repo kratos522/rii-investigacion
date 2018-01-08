@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateNotaRojasTable extends Migration
+class CreateCapturasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,12 @@ class CreateNotaRojasTable extends Migration
      */
     public function up()
     {
-        Schema::create('notas_rojas', function (Blueprint $table) {
+        Schema::create('capturas', function (Blueprint $table) {
             $table->increments('id');
             $table->string('workflow_state')->nullable();
-            $table->integer('identidad_persona');
-            $table->string('nombre_persona');
-            $table->string('nacionalidad');
-            $table->string('descripcion');
+            $table->integer('id_orden')->nullable();
+            $table->integer('id_denuncia')->nullable();
+            $table->integer('id_requerimiento')->nullable();
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
@@ -32,6 +31,6 @@ class CreateNotaRojasTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('notas_rojas');
+        Schema::dropIfExists('capturas');
     }
 }

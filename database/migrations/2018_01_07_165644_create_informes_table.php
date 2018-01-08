@@ -15,6 +15,8 @@ class CreateInformesTable extends Migration
     {
         Schema::create('informes', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('tipoable_type')->nullable();
+            $table->integer('tipoable_id')->nullable();
             $table->string('titulo');
             //$table->string('tipo_informe');
             $table->integer('id_tipo_informe');

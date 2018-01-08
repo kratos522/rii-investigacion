@@ -19,7 +19,7 @@ class Detenido extends Model
 //y los casos en flagrancia?
   public function orden_captura()
   {
-      return $this->hasOne(Orden::class, 'id_orden_captura');
+      return $this->hasOne(Orden::class, 'id_orden');
   }
 
   public function lugarSS()

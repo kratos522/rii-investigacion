@@ -15,6 +15,8 @@ class CreateDictamensTable extends Migration
     {
         Schema::create('dictamenes', function (Blueprint $table) {
           $table->increments('id');
+          $table->string('dictamable_type')->nullable();
+          $table->integer('dictamable_id')->nullable();
           $table->string('titulo');
           //$table->string('tipo_reporte');
           $table->integer('id_tipo_reporte');
